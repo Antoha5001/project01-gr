@@ -1,0 +1,147 @@
+/*HEADER*/
+
+.header-box {
+	background: white;
+	min-height: 180px;
+	box-shadow: 0 0px 5px $dark-gray;
+	overflow: hidden;
+	@media (max-width: $planshet) {
+		height: auto;
+		//min-height: 200px;
+		padding-bottom: 5px;
+		box-shadow: none;
+	}
+	@media (max-width: $phone) {
+		box-shadow: none;
+	}
+}
+
+.header__top {
+	@include flexbox(row, wrap);
+}
+
+.header__top-cols {
+	flex: 1 0 190px;
+	margin: 0 10px 0;
+	min-height: 120px;
+	@media (max-width: $planshet) {
+		flex: 1 1 100%;
+		min-height: 20px;
+	}
+	@media (max-width: $phone) {
+		padding: 0 5px;
+	}
+}
+
+.header__top-cols_logo {
+	@media (max-width: $phone) {
+		order: 3;
+	}
+}
+
+.header__top-cols_phone {
+	@media (max-width: $phone) {
+		order: 4;
+	}
+}
+
+.header__top-cols_email {
+	@media (max-width: $phone) {
+		order: 5;
+	}
+}
+
+.header__top-cols_addres {
+	@media (max-width: $phone) {
+		order: 6;
+	}
+}
+
+.header__logo {
+	display: block;
+	margin-top: 10px;
+	min-width: 100px;
+	@media (max-width: $planshet) {
+		margin: 15px auto;
+		max-width: 350px;
+	}
+	@media (max-width: $phone) {
+		margin: 40px auto 10px;
+		order: 3;
+	}
+}
+
+.header__text {
+	text-decoration: none;
+	display: block;
+	text-align: right;
+	margin-top: 20px;
+	font-size: 1em;
+	line-height: 1.4em;
+	color: $black;
+	font-weight: bold;
+	@media (max-width: $planshet) {
+		text-align: center;
+		font-size: 1.4em;
+		margin-top: 1.4em;
+	}
+	@media (max-width: $phone) {
+		text-align: center;
+		font-size: 1.8em;
+		margin-top: 1.4em;
+	}
+}
+
+.header__email {
+	flex: 0 0 50%;
+	transition: color .5s;
+	display: block;
+	text-align: center;
+	&:hover {
+		color: $orange;
+	}
+	&:before {
+		content: url("../images/icons-mail_small.png");
+		transition: all .5s;
+		width: 21px;
+		height: 15px;
+		margin: 0 8px 0 0;
+		display: inline-block;
+		vertical-align: -17%;
+			@media (max-width: $planshet) {
+				vertical-align: -13%;
+				content: url("../images/icons-mail.svg");
+				width: 28px;
+				height: 20;
+			}
+			@media (max-width: $phone) {
+				vertical-align: -7%;
+			}
+	}
+}
+
+.header__phone:before {
+	content: url("../images/icons-phone_small.png");
+	transition: all .5s;
+	width: 15px;
+	height: 15px;
+	margin: 0 8px 0 0;
+	display: inline-block;
+	vertical-align: -17%;
+	@media (max-width: $planshet) {
+		vertical-align: -13%;
+		content: url("../images/icons-phone.svg");
+		width: 20px;
+		height: 20;
+	}
+	@media (max-width: $phone) {
+		vertical-align: -7%;
+	}
+}
+
+.header__addres {
+	@media (max-width: $phone) {
+		display: none;
+		margin: 0;
+	}
+}

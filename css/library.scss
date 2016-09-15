@@ -1,0 +1,55 @@
+$planshet: 910px;
+$phone: 600px;
+$miniphone: 400px;
+$blue: #00478a;
+$bluet: rgba(37, 35, 72, 0.65);
+$lite-blue: #a6e3ff;
+$nice-blue: #e8f4ff;
+$lite-bluet: rgba(83, 77, 177, 0.85);
+$light-orange: #FF704C;
+$dark-orange: #CC2900;
+$orange: #FF3300;
+$orange: rgb(255, 51, 0);
+$nice-orange: rgb(252, 215, 206);
+$green: #00ba78;
+$dark-green: #005c3a;
+$lite-green: #00cc84;
+$light-gray: #efeeee;
+$gray: #dbdbdb;
+$dark-gray: #6f6f6f;
+$black: #333333;
+$dark-black: #222222;
+
+/*$magenta: #de3169;*/
+
+$magenta: #F5001F;
+$light-magenta: #ff9fab;
+$dark-magenta: #980012;
+@mixin border() {
+	border: 1px solid black;
+}
+
+@mixin flexbox($atr1, $atr2) {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: $atr1 $atr2;
+}
+
+@mixin text($atr1, $atr2) {
+	font-size: $atr1;
+	line-height: $atr2;
+}
+
+@mixin bradius($atr1) {
+	border-radius: $atr1;
+	-webkit-border-radius: $atr1;
+	-moz-border-radius: $atr1;
+}
+
+@mixin shadow() {
+	box-shadow: 0 0px 5px $dark-gray;
+	-webkit-box-shadow: 0 0px 5px $dark-gray;
+	-moz-box-shadow: 0 0px 5px $dark-gray;
+}
