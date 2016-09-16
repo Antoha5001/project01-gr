@@ -600,12 +600,12 @@ li.breadcrumb__active {
 /*.production*/
 .production-box {
   min-height: 350px;
-  background-image: url("../images/port_bg2.jpg");
+  background-image: url("../images/port_bg.jpg");
   background-position: center center;
   background-size: 100% auto;
   background-attachment: fixed;
   background-color: #dbdbdb;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 9px 2px #6f6f6f;
   padding: 0 0 40px; }
   @media (max-width: 910px) {
     .production-box {
