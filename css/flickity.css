@@ -61,7 +61,10 @@ http://flickity.metafizzy.co
           transform: translateY(-50%);
 }
 
-.carousel:hover .flickity-prev-next-button { background: white; }
+.carousel:hover .flickity-prev-next-button { 
+	opacity: 1;
+	background: white; 
+}
 
 .flickity-prev-next-button:focus {
   outline: none;
@@ -101,11 +104,11 @@ http://flickity.metafizzy.co
 
 .flickity-prev-next-button .arrow {
   fill: #333;
-	fill-opacity: 0;
-	transition: fill-opacity 1s;
+	opacity: 0;
+	transition: opacity 1s;
 } 
 .carousel:hover .flickity-prev-next-button .arrow {
-	fill-opacity: 1;
+	opacity: 1;
 }
 
 /* color & size if no SVG - IE8 and Android 2.3 */
