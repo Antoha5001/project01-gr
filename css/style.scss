@@ -545,13 +545,13 @@ li.breadcrumb__active {
 .production-box {
 	min-height: 350px;
 	background:{
-		image:url('../images/port_bg.jpg');
+		image:url('../images/port_bg2.jpg');
 		position: center center;
 		size:100% auto;
 		attachment: fixed;
 		color:$gray;
 	}  
-	box-shadow: 0 0 9px 2px $dark-gray;
+	box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
 	padding: 0 0 40px;
 	//z-index: 100;
 	@media (max-width: $planshet) {
