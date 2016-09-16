@@ -53,7 +53,9 @@
 .header__logo {
   display: block;
   margin-top: 10px;
-  min-width: 100px; }
+  min-width: 100px;
+  opacity: 0;
+  transition: opacity .5s; }
   @media (max-width: 910px) {
     .header__logo {
       margin: 15px auto;
@@ -1418,3 +1420,6 @@ li.breadcrumb__active {
 
 .link:hover {
   color: #ff3300; }
+
+.is-visibile {
+  opacity: 1; }
