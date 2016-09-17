@@ -561,6 +561,7 @@ li.breadcrumb__active {
 }
 
 .production__item {
+	opacity: 0;
 	position: relative;
 	flex: 0 0 200px;
 	margin: 20px 10px 0;
@@ -569,7 +570,7 @@ li.breadcrumb__active {
 	@include bradius(7px);
 	box-shadow: 0 0px 5px 0 $dark-gray;
 	overflow: hidden;
-	transition: all .3s;
+	transition: all .5s;
 	@media (max-width: $phone) {
 		flex: 1 1 calc(50% - 20px);
 		height: auto;
@@ -964,6 +965,8 @@ li.breadcrumb__active {
 }
 
 .footer__logo {
+	opacity: 0;
+	transition: $transition;
 	display: block;
 	margin: 0 auto 0;
 	max-width: 250px;
@@ -1457,4 +1460,7 @@ li.breadcrumb__active {
 
 .link:hover {
 	color: $orange;
+}
+.is-visibile{
+	opacity: 1;
 }
