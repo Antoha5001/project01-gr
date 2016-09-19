@@ -570,6 +570,7 @@ li.breadcrumb__active {
 	@include bradius(7px);
 	box-shadow: 0 0px 5px 0 $dark-gray;
 	overflow: hidden;
+	transform: translateY(-20px);
 	transition: all .5s;
 	@media (max-width: $phone) {
 		flex: 1 1 calc(50% - 20px);
@@ -578,6 +579,9 @@ li.breadcrumb__active {
 	}
 	@media (max-width: $miniphone) {
 		//flex: 1 1 calc(100% - 20px);
+	}
+	&.is-visibile{
+		transform:translateY(0px);
 	}
 	&:hover {
 		box-shadow: 0 2px 15px 0 $dark-gray;
