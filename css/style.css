@@ -626,12 +626,15 @@ li.breadcrumb__active {
   -moz-border-radius: 7px;
   box-shadow: 0 0px 5px 0 #6f6f6f;
   overflow: hidden;
+  transform: translateY(-20px);
   transition: all .5s; }
   @media (max-width: 600px) {
     .production__item {
       flex: 1 1 calc(50% - 20px);
       height: auto;
       min-height: 120px; } }
+  .production__item.is-visibile {
+    transform: translateY(0px); }
   .production__item:hover {
     box-shadow: 0 2px 15px 0 #6f6f6f;
     transform: translate(0px, -5px); }
