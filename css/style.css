@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700);
 .header-box {
   background: white;
-  min-height: 180px;
+  min-height: 170px;
   box-shadow: 0 0px 5px #6f6f6f;
   overflow: hidden; }
   @media (max-width: 910px) {
