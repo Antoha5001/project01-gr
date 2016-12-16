@@ -1,5 +1,8 @@
 $(document).ready(function(){
 	//alert($(".news__small-image").height());
+	setTimeout(function() {
+        $('.header__logo').addClass('is-visibile');
+	}, 500);
 	
 	$(".popup_button").magnificPopup();
 	
