@@ -609,6 +609,9 @@ li.breadcrumb__active {
   background-color: #dbdbdb;
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
   padding: 0 0 40px; }
+  @media (max-width: 1375px) {
+    .production-box {
+      background-size: cover; } }
   @media (max-width: 910px) {
     .production-box {
       padding: 0 0px 20px;
