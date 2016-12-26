@@ -455,11 +455,12 @@ li.breadcrumb__active {
 .carousel {
 	width: 100%;
 	/* full width */
-	background: white;
+	background: url("../images/carusel_bg.jpg") repeat-x;
 	height: 360px;
 	margin: 0;
 	// @include bradius(7px);
 	//box-shadow: 0 0px 5px $dark-gray;
+	//border: 1px solid black;
 	overflow: hidden;
 	height: auto;
 	min-height: 360px;

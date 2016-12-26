@@ -94,9 +94,8 @@
 					<div class="content content_flex">
 						<div class="top-menu-small">
 							<ul class="top-menu-small__items">
-								<li class="top-menu-small__item"><a href="" class="top-menu-small__link">Ffff</a></li>
-								<li class="top-menu-small__item"><a href="" class="top-menu-small__link">Vvvv</a></li>
-								<li class="top-menu-small__item"><a href="" class="top-menu-small__link">Bbbb</a></li>
+								<li class="top-menu-small__item"><a href="" class="top-menu-small__link">Требования к макетам</a></li>
+								<li class="top-menu-small__item"><a href="" class="top-menu-small__link">Каталог высечных штампов</a></li>
 							</ul>
 						</div>
 						<div class="header__top-cols header__top-cols_logo wow fadeIn" data-wow-delay="0.2s" data-wow-duration="1.3s">
