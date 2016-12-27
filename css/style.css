@@ -34,9 +34,14 @@
     .header__top-cols {
       padding: 0 5px; } }
 
-@media (max-width: 600px) {
-  .header__top-cols_logo {
-    order: 3; } }
+.header__top-cols_logo {
+  flex: 0 0 220px; }
+  @media (max-width: 910px) {
+    .header__top-cols_logo {
+      flex: 1 1 100%; } }
+  @media (max-width: 600px) {
+    .header__top-cols_logo {
+      order: 3; } }
 
 @media (max-width: 600px) {
   .header__top-cols_phone {

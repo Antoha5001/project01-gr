@@ -34,6 +34,10 @@
 }
 
 .header__top-cols_logo {
+	flex: 0 0 220px;
+	@media (max-width: $planshet) {
+		flex: 1 1 100%;
+	}
 	@media (max-width: $phone) {
 		order: 3;
 	}
