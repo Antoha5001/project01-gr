@@ -1,7 +1,7 @@
 <?
 include('includes/head.php');
 ?><?
-include('includes/banner_full.php');
+include('includes/banner_1000.php');
 ?>
 
 
