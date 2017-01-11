@@ -101,7 +101,7 @@
               <a href="/" class="header__logo"> <img src="images/logo.svg" alt=""> </a>
             </div>
             <div class="header__top-cols header__top-cols_phone">
-              <p class="header__phone">+7 (3852) 623344</p>
+              <p class="header__phone">+7 (3852) 623399</p>
               <p class="header__button">
                 заказать звонок
               </p>
