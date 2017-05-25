@@ -36,9 +36,8 @@
           <div class="content content_flex">
             <div class="top-menu-small">
               <ul class="top-menu-small__items">
-                <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Ffff</a></li>
-                <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Vvvv</a></li>
-                <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Bbbb</a></li>
+                <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Требования к макетам</a></li>
+                <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Каталог высечных штампов</a></li>
               </ul>
             </div>
             <div class="header__top-cols header__top-cols_logo wow fadeIn" data-wow-delay="0.2s" data-wow-duration="1.3s">
@@ -54,19 +53,20 @@
 						<div class="header__top-cols header__top-cols_email">
 						</div>
 -->
-            <div class="header__top-cols header__top-cols_addres"> <a href="mailto:623344@mail.ru" class="header__text header__email">623344@mail.ru</a>
+            <div class="header__top-cols header__top-cols_addres">
               <p class="header__text header__addres">г. Барнаул
                 <br/> ул. Южные Мастерские, д. 14 Б</p>
+                  <a href="mailto:623344@mail.ru" class="header__text header__email">623344@mail.ru</a>
             </div>
             <div class="hr"></div>
             <div class="top-menu">
               <a href="#" class="top-menu__button"> <img class="top-menu__image" src="images/menu-button.svg" alt="" /><span class="top-menu__title">МЕНЮ</span> </a>
               <ul class="top-menu__items">
+                <li class="top-menu__item"><a href="" class="top-menu__link">Новости</a></li>
                 <li class="top-menu__item"><a href="" class="top-menu__link">Продукция</a></li>
-                <li class="top-menu__item"><a href="" class="top-menu__link">Продукция</a></li>
-                <li class="top-menu__item"><a href="" class="top-menu__link">Продукция</a></li>
-                <li class="top-menu__item"><a href="" class="top-menu__link">Продукция</a></li>
-                <li class="top-menu__item"><a href="" class="top-menu__link">Продукция</a></li>
+                <li class="top-menu__item"><a href="" class="top-menu__link">Оборудование</a></li>
+                <li class="top-menu__item"><a href="" class="top-menu__link">О типографии</a></li>
+                <li class="top-menu__item"><a href="" class="top-menu__link">Контакты</a></li>
               </ul>
             </div>
           </div>
