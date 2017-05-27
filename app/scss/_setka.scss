@@ -8,15 +8,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -15px;
-	border: 1px solid black;
+	//border: 1px solid black;
 	//margin: auto;
 }
 .col{
-	min-height: 100px;
+	//min-height: 100px;
 	width: calc(8.3333% - 30px);
 	box-sizing: border-box;
-	text-align: center;
-	background: green;
+	//text-align: center;
+	//background: green;
 	margin: 15px;
 }
 .col-lg-1{width:calc(8.333333333333334% - 30px);}
