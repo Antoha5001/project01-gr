@@ -2,7 +2,7 @@
 
 .header-box {
   background: white;
-  min-height: 170px;
+  //min-height: 170px;
   box-shadow: 0 0px 5px $dark-gray;
   overflow: hidden;
   @media (max-width: $planshet) {
@@ -21,16 +21,17 @@
 }
 
 .header__top-cols {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 190px;
-  flex: 1 0 190px;
-  margin: 0 10px 0;
-  min-height: 90px;
+  //-webkit-box-flex: 1;
+//  -ms-flex: 1 0 190px;
+  //flex: 1 0 190px;
+  //margin: 0 10px 0;
+  //min-height: 90px;
+//  border: 1px solid black;
   @media (max-width: $planshet) {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 100%;
-    flex: 1 1 100%;
-    min-height: 20px;
+  //  -webkit-box-flex: 1;
+  //  -ms-flex: 1 1 100%;
+  //  flex: 1 1 100%;
+  //  min-height: 20px;
   }
   @media (max-width: $phone) {
     padding: 0 5px;
@@ -38,13 +39,11 @@
 }
 
 .header__top-cols_logo {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 220px;
-  flex: 0 0 220px;
+//  -webkit-box-flex: 0;
+  //-ms-flex: 0 0 220px;
+//  flex: 0 0 220px;
   @media (max-width: $planshet) {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 100%;
-    flex: 1 1 100%;
+
   }
   @media (max-width: $phone) {
     -webkit-box-ordinal-group: 4;
@@ -71,19 +70,19 @@
 }
 
 .header__top-cols_addres {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 220px;
-  flex: 0 0 220px;
+//  -webkit-box-flex: 0;
+  //-ms-flex: 0 0 220px;
+//  flex: 0 0 220px;
   padding-top: 20px;
   @media (max-width: $planshet) {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 100%;
-    flex: 1 1 100%;
+  //  -webkit-box-flex: 1;
+  //  -ms-flex: 1 1 100%;
+  //  flex: 1 1 100%;
   }
   @media (max-width: $phone) {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 100%;
-    flex: 1 1 100%;
+  //  -webkit-box-flex: 1;
+  //  -ms-flex: 1 1 100%;
+  //  flex: 1 1 100%;
     -webkit-box-ordinal-group: 7;
     -ms-flex-order: 6;
     order: 6;
@@ -93,7 +92,7 @@
 .header__logo {
   display: block;
   margin-top: 10px;
-  min-width: 100px;
+  max-width: 250px;
   opacity: 0;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
@@ -102,6 +101,7 @@
     max-width: 350px;
   }
   @media (max-width: $phone) {
+    max-width: auto;
     margin: 40px auto 10px;
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;

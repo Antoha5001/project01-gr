@@ -229,8 +229,8 @@ h5 {
 }
 
 .content {
-	max-width: 1000px;
-	margin: auto;
+	//max-width: 1000px;
+	//margin: auto;
 	padding: 0 20px;
 }
 
@@ -548,6 +548,8 @@ li.breadcrumb__active {
 	}
 
 	&__img {
+	max-height: 100%;
+	width: auto;
 		@media (max-width: $planshet) {
 			display: block;
 			max-width: 476px;
@@ -582,7 +584,7 @@ li.breadcrumb__active {
 		color: $gray;
 	}
 	box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
-	padding: 0 0 40px;
+	padding: 30px 0;
 	//z-index: 100;
 	@media (max-width: 1375px) {
 		background-size: cover;
@@ -594,11 +596,12 @@ li.breadcrumb__active {
 }
 
 .production__item {
+	margin-top: 15px;
 	opacity: 0;
 	position: relative;
-	flex: 0 0 200px;
-	margin: 20px 10px 0;
-	height: 140px;
+	//flex: 0 0 200px;
+	//margin: 20px 10px 0;
+	//height: 140px;
 	background: #fff;
 	@include bradius(7px);
 	box-shadow: 0 0 5px 0 $dark-gray;
@@ -964,12 +967,13 @@ li.breadcrumb__active {
 /*FOOTER*/
 .footer {
 	background: $dark-black;
+	padding: 15px;
 	//flex: 1 1 100%;
 	margin: 0;
-	height: 140px;
+	min-height: 140px;
 	overflow: hidden;
 	color: #6762ba;
-	@media (max-width: /*$planshet*/960px) {
+	@media (max-width: 960px) {
 		height: auto;
 		min-height: 120px;
 	}
@@ -980,7 +984,7 @@ li.breadcrumb__active {
 	text-align: left;
 	color: $gray;
 	font-size: 0.9em;
-	@media (max-width: /*$planshet*/960px) {
+	@media (max-width: 960px) {
 		text-align: center;
 		font-size: 1em;
 	}
@@ -988,7 +992,7 @@ li.breadcrumb__active {
 
 .footer__contacts_right {
 	text-align: right;
-	@media (max-width: /*$planshet*/960px) {
+	@media (max-width: 960px) {
 		text-align: center;
 		font-size: 1em;
 	}

@@ -34,7 +34,7 @@ $(document).ready(function(){
 		image:$('.top-menu__image'),
 		button:$('.top-menu__button'),
 	},
-		planshet = 910;
+		planshet = 960;
 
 	$(window).resize(function(){
 		var $this = $(this),

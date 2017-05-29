@@ -9,9 +9,9 @@
   <meta name="author" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/mystyle.min.css" media="screen">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,46 +28,47 @@
 <![endif]-->
 
 </head>
+
 <body>
   <div class="conteiner">
     <div class="main">
       <div class="all">
         <section class="header-box">
-          <div class="content content_flex">
-            <div class="top-menu-small">
-              <ul class="top-menu-small__items">
-                <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Требования к макетам</a></li>
-                <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Каталог высечных штампов</a></li>
-              </ul>
-            </div>
-            <div class="header__top-cols header__top-cols_logo wow fadeIn" data-wow-delay="0.2s" data-wow-duration="1.3s">
-              <a href="/" class="header__logo"> <img src="images/logo.svg" alt=""> </a>
-            </div>
-            <div class="header__top-cols header__top-cols_phone">
-              <p class="header__phone">+7 (3852) 623399</p>
-              <!-- <p class="header__button">
-                заказать звонок
-              </p> -->
-            </div>
-            <!--
-						<div class="header__top-cols header__top-cols_email">
-						</div>
--->
-            <div class="header__top-cols header__top-cols_addres">
-              <p class="header__text header__addres">г. Барнаул
-                <br/> ул. Южные Мастерские, д. 14 Б</p>
+          <div class="wrapper">
+            <div class="row">
+              <div class="col col-lg-12 top-menu-small">
+                <ul class="top-menu-small__items">
+                  <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Требования к макетам</a></li>
+                  <li class="top-menu-small__item"><a href="" class="top-menu-small__link">Каталог высечных штампов</a></li>
+                </ul>
+              </div>
+              <div class="col col-lg-4 col-md-12 header__top-cols header__top-cols_logo">
+                <div class="">
+                  <a href="/" class="header__logo"> <img src="images/logo.svg" alt=""> </a>
+                </div>
+              </div>
+              <div class="col col-lg-4 col-md-12 header__top-cols header__top-cols_phone">
+                <p class="header__phone">+7 (3852) 623399</p>
+              </div>
+              <div class="col col-lg-4 col-md-12 header__top-cols header__top-cols_addres">
+                <div class=" ">
+                  <p class="header__text header__addres">г. Барнаул
+                    <br/> ул. Южные Мастерские, д. 14 Б</p>
                   <a href="mailto:623344@mail.ru" class="header__text header__email">623344@mail.ru</a>
-            </div>
-            <div class="hr"></div>
-            <div class="top-menu">
-              <a href="#" class="top-menu__button"> <img class="top-menu__image" src="images/menu-button.svg" alt="" /><span class="top-menu__title">МЕНЮ</span> </a>
-              <ul class="top-menu__items">
-                <li class="top-menu__item"><a href="" class="top-menu__link">Новости</a></li>
-                <li class="top-menu__item"><a href="" class="top-menu__link">Продукция</a></li>
-                <li class="top-menu__item"><a href="" class="top-menu__link">Оборудование</a></li>
-                <li class="top-menu__item"><a href="" class="top-menu__link">О типографии</a></li>
-                <li class="top-menu__item"><a href="" class="top-menu__link">Контакты</a></li>
-              </ul>
+                </div>
+              </div>
+              <div class="col col-lg-12 hr"></div>
+
+              <div class="top-menu">
+                <a href="#" class="top-menu__button"> <img class="top-menu__image" src="images/menu-button.svg" alt="" /><span class="top-menu__title">МЕНЮ</span> </a>
+                <ul class="top-menu__items">
+                  <li class="top-menu__item"><a href="" class="top-menu__link">Новости</a></li>
+                  <li class="top-menu__item"><a href="" class="top-menu__link">Продукция</a></li>
+                  <li class="top-menu__item"><a href="" class="top-menu__link">Оборудование</a></li>
+                  <li class="top-menu__item"><a href="" class="top-menu__link">О типографии</a></li>
+                  <li class="top-menu__item"><a href="" class="top-menu__link">Контакты</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
