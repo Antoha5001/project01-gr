@@ -230,9 +230,10 @@ h5 {
 }
 
 .content {
-	//max-width: 1000px;
-	//margin: auto;
 	padding: 0 20px;
+}
+.content-box {
+	padding: 0 0 40px;
 }
 
 .header-box > .content {
@@ -254,7 +255,7 @@ h5 {
 .content_stretch {
 	align-items: stretch;
 	//min-height: 600px;
-	padding-bottom: 40px;
+	//padding-bottom: 40px;
 	//overflow: hidden;
 }
 
@@ -967,7 +968,7 @@ li.breadcrumb__active {
 	min-height: 250px;
 	margin: 40px 20px 0;
 	@media (max-width: $planshet) {
-		flex: 1 1 calc(50%-20px);
+		flex: 1 1 calc(50% - 20px);
 	}
 }
 

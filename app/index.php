@@ -73,7 +73,6 @@ include('includes/banner_1000.php');
 		<section class="content">
 			<div class="wrapper content_between">
 				<div class="row">
-
 					<div class="col col-lg-8 col-md-12 base-block">
 						<h1>Офсетная печать в&nbsp;Барнауле</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci molestias corrupti quae quasi fugit incidunt, sed, sunt dolorem? Molestiae tenetur sed illum est dolor, provident perspiciatis error sit dignissimos inventore quia, laborum ad earum
