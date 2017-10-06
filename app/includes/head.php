@@ -30,6 +30,7 @@
 </head>
 
 <body>
+<div id="scroller"></div>
 <div class="conteiner">
 <div class="main">
   <div class="all">
