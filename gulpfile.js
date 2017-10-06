@@ -4,7 +4,7 @@ var gulp           = require('gulp'),
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
 		uglify         = require('gulp-uglify'),
-		cleanCSS				= require('gulp-clean-css'),
+		// cleanCSS				= require('gulp-clean-css'),
 		cssnano					= require('gulp-cssnano'),
 		rename         = require('gulp-rename'),
 		del            = require('del'),
@@ -12,7 +12,7 @@ var gulp           = require('gulp'),
 		cache          = require('gulp-cache'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		ftp            = require('vinyl-ftp'),
-		notify         = require("gulp-notify"),
+		// notify         = require("gulp-notify"),
 		gcmq         = require("gulp-group-css-media-queries"),
 		srv 						= 'project02.gr:82';
 
@@ -20,23 +20,24 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'app/script/jquery.min.js',
-		'app/script/jquery.validate.min.js',
-		'app/script/flickity.pkgd.min.js',
+		// 'app/script/jquery.min.js',
+		// 'app/script/jquery.validate.min.js',
 		'app/script/modernizr.js',
 		'app/script/myscript.js',
-		'app/script/parallax.js',
+		'app/script/parallax.js'
 		])
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('app/script'));
 });
 
+
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
+		'libs/jquery/dist/jquery.min.js',
+		'app/script/flickity.pkgd.min.js',
 		'app/libs/modernizr/modernizr-custom.js',
-		'app/script/common.min.js', // Всегда в конце
+		'app/script/common.min.js' // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)

@@ -9,7 +9,7 @@
 .shtamp-box{
   padding: 20px;
   display: flex;
-  position: relative;
+  //position: relative;
   flex-basis: calc(30% - 10px);
 
   //min-height: 300px;
@@ -18,7 +18,12 @@
   margin: 10px;
   border: 1px solid gray;
   flex-grow: 1;
+  opacity: 0;
+  transition: opacity 0.9s;
   //max-height: 350px;
+  &.is-visible{
+    opacity: 1;
+  }
   img{
     height: 250px;
     @media (max-width:$planshet){
