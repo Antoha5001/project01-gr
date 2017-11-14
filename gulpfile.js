@@ -20,9 +20,13 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		// 'app/script/jquery.min.js',
+		'app/script/jquery.min.js',
 		// 'app/script/jquery.validate.min.js',
+		'app/script/flickity.pkgd.min.js',
 		'app/script/modernizr.js',
+		'app/script/jquery.inputmask.bundle.min.js',
+		'app/script/tingle.min.js',
+		'app/script/modal.js',
 		'app/script/myscript.js',
 		'app/script/parallax.js'
 		])
@@ -34,8 +38,7 @@ gulp.task('common-js', function() {
 
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
-		'libs/jquery/dist/jquery.min.js',
-		'app/script/flickity.pkgd.min.js',
+		// 'libs/jquery/dist/jquery.min.js',
 		'app/libs/modernizr/modernizr-custom.js',
 		'app/script/common.min.js' // Всегда в конце
 		])
