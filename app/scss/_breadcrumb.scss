@@ -1,0 +1,23 @@
+/*BREADCRUMB*/
+.breadcrumb {
+  display: inline-block;
+  margin: 10px 0;
+  color: $black;
+  background: #fff;
+  padding: 5px 10px;
+  @include bradius(7px);
+}
+
+.breadcrumb a,
+.breadcrumb li {
+  font-size: 0.9em;
+  display: inline;
+  color: $dark-gray;
+}
+.breadcrumb a:hover{
+  color: $orange;
+  transition: all 0.3s;
+}
+li.breadcrumb__active {
+  color: $black;
+}

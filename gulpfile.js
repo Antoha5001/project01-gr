@@ -1,150 +1,82 @@
-var gulp           = require('gulp'),
-		gutil          = require('gulp-util' ),
-		sass           = require('gulp-sass'),
-		browserSync    = require('browser-sync'),
-		concat         = require('gulp-concat'),
-		uglify         = require('gulp-uglify'),
-		// cleanCSS				= require('gulp-clean-css'),
-		cssnano					= require('gulp-cssnano'),
-		rename         = require('gulp-rename'),
-		del            = require('del'),
-		imagemin       = require('gulp-imagemin'),
-		cache          = require('gulp-cache'),
-		autoprefixer   = require('gulp-autoprefixer'),
-		ftp            = require('vinyl-ftp'),
-		// notify         = require("gulp-notify"),
-		gcmq         = require("gulp-group-css-media-queries"),
-		srv 						= 'project02.gr:82';
+"use strict";
 
-// Скрипты проекта
+const gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	browserSync = require('browser-sync').create(),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify'),
+	cssnano = require('gulp-cssnano'),
+	rename = require('gulp-rename'),
+	del = require('del'),
+	imagemin = require('gulp-imagemin'),
+	pngquant = require('imagemin-pngquant'),
+	cache = require('gulp-cache'),
+	autoprefixer = require('gulp-autoprefixer'),
+	pump = require('pump'),
+	babel = require('gulp-babel');
+	
 
-gulp.task('common-js', function() {
-	return gulp.src([
-		'app/script/jquery.min.js',
-		// 'app/script/jquery.validate.min.js',
-		'app/script/flickity.pkgd.min.js',
-		'app/script/modernizr.js',
-		'app/script/jquery.inputmask.bundle.min.js',
-		'app/script/tingle.min.js',
-		'app/script/modal.js',
-		'app/script/myscript.js',
-		'app/script/parallax.js'
-		])
-	.pipe(concat('common.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('app/script'));
-});
+const srv = 'project02.gr:82';
+
+var myScripts = [
+    'app/script/jquery.min.js',
+    'app/script/jquery.validate.min.js',
+    'app/script/modernizr.js',
+    'app/script/jquery.inputmask.bundle.min.js',
+    'app/script/tingle.min.js',
+    'app/script/flickity.pkgd.min.js',
+    'app/script/bootstrap.min.js',
+	'app/script/parallax.js',
+    'app/script/myscript.js'
+]
 
 
-gulp.task('js', ['common-js'], function() {
-	return gulp.src([
-		// 'libs/jquery/dist/jquery.min.js',
-		'app/libs/modernizr/modernizr-custom.js',
-		'app/script/common.min.js' // Всегда в конце
-		])
-	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Минимизировать весь js (на выбор)
-	.pipe(gulp.dest('app/script'))
-	.pipe(browserSync.reload({stream: true}));
-});
+function scripts() {
 
-gulp.task('browser-sync',['js','css-libs'], function() {
+	return gulp.src(myScripts)
+		.pipe(concat('scripts.min.js'))
+		// .pipe(babel({
+        //     presets: ['env']
+        // }))
+		.pipe(uglify())
+		.pipe(gulp.dest('app/common'));
+}
+
+function styles(){
+	return gulp.src('./app/scss/mystyle.scss')
+	.pipe(sass())
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest('app/css'));
+}
+
+
+function defaultTask() {
+
+
+}
+
+gulp.task('serve', function(){
+
 	browserSync.init({
-		/*server: {
-			baseDir: '500303_GULP'
-		},*/
-		proxy:srv,
-		notify: false
-		// tunnel: true,
-		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
-	});
-});
+        proxy: srv
+    });
+	
+	gulp.watch('app/scss/**/*.scss',gulp.series('style')).on('change', browserSync.reload);
+	gulp.watch('app/script/**/*.js', gulp.series('script')).on('change', browserSync.reload);
 
-//gulp.task('sass', function() {
-	//return gulp.src('500303_GULP/scss/**/*.scss')
-	//.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-	/*.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleanCSS()) // Опционально, закомментировать при отладке
-	.pipe(gulp.dest('500303_GULP/css'))
-	.pipe(browserSync.reload({stream: true}));
-});*/
-gulp.task('sass', function () {
-	return gulp.src('app/scss/*.scss') //берем какие-нибудь файлы, и возвращаем
-				.pipe(sass()) // вызов како-то команды, плагина,
-				.pipe(gcmq()) // Группируем media запросы
-				.pipe(autoprefixer(['last 15 versions','> 1%','ie 8','ie 7'],{cascade:true}))
-				.pipe(gulp.dest('app/css')) //выгружаем работу плагина
-				.pipe(browserSync.reload({stream:true})); //инжектим css
-}); // инструкция, задача
-gulp.task('css-libs',['sass'], function(){
-	return gulp.src(['app/css/mystyle.css',])
-				.pipe(cssnano())
-				.pipe(rename({suffix:'.min'}))
-				.pipe(gulp.dest('app/css'))
-				.pipe(browserSync.reload({stream:true}));
-});
-gulp.task('watch', ['css-libs', 'js', 'browser-sync'], function() {
-	gulp.watch('app/scss/**/*.scss', ['css-libs']);
-	gulp.watch(['app/script/**/*.js', 'app/script/common.min.js'], ['js']);
-	//gulp.watch('500303_GULP/*.php', browserSync.reload);
 	gulp.watch('app/**/*.php').on('change', browserSync.reload);
 	gulp.watch('app/**/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('imagemin', function() {
-	return gulp.src('app/images/**/*')
-	.pipe(cache(imagemin()))
-	.pipe(gulp.dest('dist/images'));
-});
 
-gulp.task('build', ['removedist', 'imagemin', 'css-libs', 'js'], function() {
+// gulp.task('default', function(){
+// 	console.log('default');
+// 	gulp.series('serve');
+// });
+gulp.task('default', gulp.parallel('serve'));
+exports.script = scripts;
+exports.style = styles;
+// exports.default = defaultTask;
 
-	var buildFiles = gulp.src([
-		'app/*.html',
-		'app/*.php',
-		'app/.htaccess',
-		]).pipe(gulp.dest('dist'));
+// gulp.task('script', scripts);
 
-	var buildCss = gulp.src([
-		'app/css/mystyle.min.css',
-		]).pipe(gulp.dest('dist/css'));
-
-	var buildJs = gulp.src([
-		'app/script/scripts.min.js',
-		'app/script/form.php',
-		]).pipe(gulp.dest('dist/script'));
-
-	var buildFonts = gulp.src([
-		'app/fonts/**/*',
-		]).pipe(gulp.dest('dist/fonts'));
-
-	var buildModules = gulp.src([
-		'app/modules/**/*',
-		]).pipe(gulp.dest('dist/modules'));
-
-});
-
-gulp.task('deploy', function() {
-
-	var conn = ftp.create({
-		host:      'hostname.com',
-		user:      'username',
-		password:  'userpassword',
-		parallel:  10,
-		log: gutil.log
-	});
-
-	var globs = [
-	'dist/**',
-	'dist/.htaccess',
-	];
-	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/path/to/folder/on/server'));
-
-});
-
-gulp.task('removedist', function() { return del.sync('dist'); });
-gulp.task('clearcache', function () { return cache.clearAll(); });
-
-gulp.task('default', ['watch']);

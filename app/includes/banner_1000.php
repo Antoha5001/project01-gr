@@ -1,5 +1,5 @@
-<section class="banner-box">
-    <div class="wrapper">
+<section class="container-fluid banner-box">
+    <div class="container">
         <div class="carousel">
 
             <!--First baner-->
@@ -31,6 +31,7 @@
 
         </div>
     </div>
+
     <div class="content content_nopadding">
 
 

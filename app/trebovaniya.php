@@ -3,10 +3,10 @@ include('includes/head.php');
 ?>
 
 
-    <section class="breadcrumb-box">
-        <div class="wrapper">
+    <section class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col col-lg-12">
+                <div class="col-12">
                     <ol class="breadcrumb">
                         <li>
                             <a href="\">Главная</a>
@@ -19,12 +19,63 @@ include('includes/head.php');
 
         </div>
     </section>
-    <section class="content-box">
-        <div class="wrapper">
+    <section class="content-box container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col col-lg-12 base-block">
+                <div class="col-12 base-block">
                     <h1 class="zagolovok">Заголовок</h1>
-
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="production-page-items">
+                                <img class="production-page-items__icons" src="images/icons.png" alt="">
+                                <a class="production-page-items__zagolovok" href="">Печать листовок</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati beatae sed sit
+                                    placeat nam sint nobis veritatis hic rem omnis quaerat magni fugit quam fugiat
+                                    eligendi, dolor et error blanditiis, aliquam quisquam odio cumque quas facilis!
+                                    Excepturi veniam assumenda ex eos tenetur in minus dolorum impedit, nemo, unde
+                                    distinctio similique! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati beatae sed sit
+                                    placeat nam sint nobis veritatis hic rem omnis quaerat magni fugit quam fugiat
+                                    eligendi, dolor et error blanditiis, aliquam quisquam odio cumque quas facilis!
+                                    Excepturi veniam assumenda ex eos tenetur in minus dolorum impedit, nemo, unde
+                                    distinctio similique!</p>
+                                <a href="">Подробнее...</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="production-page-items">
+                                <img class="production-page-items__icons" src="images/icons.png" alt="">
+                                <a class="production-page-items__zagolovok" href="">Печать листовок</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati beatae sed sit
+                                    placeat nam sint nobis veritatis hic rem omnis quaerat magni fugit quam fugiat
+                                    eligendi, dolor et error blanditiis, aliquam quisquam odio cumque quas facilis!
+                                    Excepturi veniam assumenda ex eos tenetur in minus dolorum impedit, nemo, unde
+                                    distinctio similique!</p>
+                                <a href="">Подробнее...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production-page-items__box">
+                        <div class="production-page-items">
+                            <img class="production-page-items__icons" src="images/icons.png" alt="">
+                            <a class="production-page-items__zagolovok" href="">Печать листовок</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati beatae sed sit
+                                placeat nam sint nobis veritatis hic rem omnis quaerat magni fugit quam fugiat
+                                eligendi, dolor et error blanditiis, aliquam quisquam odio cumque quas facilis!
+                                Excepturi veniam assumenda ex eos tenetur in minus dolorum impedit, nemo, unde
+                                distinctio similique!</p>
+                            <a href="">Подробнее...</a>
+                        </div>
+                        <div class="production-page-items">
+                            <img class="production-page-items__icons" src="images/icons.png" alt="">
+                            <h2>Печать листовок</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati beatae sed sit
+                                placeat nam sint nobis veritatis hic rem omnis quaerat magni fugit quam fugiat
+                                eligendi, dolor et error blanditiis, aliquam quisquam odio cumque quas facilis!
+                                Excepturi veniam assumenda ex eos tenetur in minus dolorum impedit, nemo, unde
+                                distinctio similique!</p>
+                            <a href="">Подробнее...</a>
+                        </div>                        
+                    </div>
                     <p>Изготовление и печать журналов и иной полиграфической продукции в ООО «Типография
                         Графика» осуществляется по оригинал-макетам Заказчика. Мы принимаем в работу макеты,
                         которые должны соответствовать нижеприведенным требованиям. Все несоответствия описанным
@@ -53,13 +104,13 @@ include('includes/head.php');
                     </ul>
                     <h2>Типы файлов, принимаемые в производство</h2>
                     <ul>
-                        <li><span>Постраничные композитные файлы в формате PDF, PS</span></li>
+                        <li>Постраничные композитные файлы в формате PDF, PS</li>
                         <li><span>Верстка печатной продукции принимается в программах:</span></li>
                         <li><span>InDesign (CS3 для PC),</span></li>
                         <li><span>Illustrator (PC, версия до CS3),</span></li>
                         <li><span>CorelDraw (PC, версия до X4).</span></li>
                     </ul>
-                    <p><span style="line-height: 1.5em;">Верстка многостраничных изданий принимается в программах In-Design. </span>
+                    <p><span>Верстка многостраничных изданий принимается в программах In-Design. </span>
                     </p>
                     <p><strong style="line-height: 1.5em;">Обязательное предоставление распечаток
                             оригинал-макетов.</strong></p>
@@ -241,8 +292,6 @@ include('includes/head.php');
                         <br/><em><strong>Данный документ содержит описание основных требований к файлам. Всю
                                 необходимую информацию, консультации, рекомендуемые настройки программ,
                                 PPD-файлы и ICC профили вы можете получить в типографии.</strong></em></p>
-
-
                     <div class="pagination">
                         <ul class="pagination">
                             <li class="disabled">
@@ -271,33 +320,38 @@ include('includes/head.php');
 
     </div>
     </div>
-    <section class="form-box-bottom__block">
-        <div class="wrapper">
-            <h2 class="podzagolovok color_white wow fadeInLeft" data-wow-offset="100" data-wow-duration="1.3s">Отправьте
-                заявку на расчет стоимости Вашего тиража</h2>
-            <div class="form-box__bottom wow fadeIn" data-wow-delay="1s" data-wow-duration="1.3s">
-                <form class="form-box-bottom__form validate" action="" method="post" id="bottom_form">
+    <section class="form-box-bottom__block container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="podzagolovok color_white wow fadeInLeft" data-wow-offset="100" data-wow-duration="1.3s">Отправьте
+                        заявку на расчет стоимости Вашего тиража</h2>
+                    <div class="form-box__bottom wow fadeIn" data-wow-delay="1s" data-wow-duration="1.3s">
+                        <form class="form-box-bottom__form validate" action="" method="post" id="bottom_form">
 
-                    <div class="form-box-bottom__pole">
-                        <span class="form-box-bottom__input-name">Ваше имя</span>
-                        <input class="form-box-bottom__input" type="text" placeholder="" name="name" required/>
+                            <div class="form-box-bottom__pole">
+                                <span class="form-box-bottom__input-name">Ваше имя</span>
+                                <input class="form-box-bottom__input" type="text" placeholder="" name="name" required/>
+                            </div>
+                            <div class="form-box-bottom__pole">
+                                <span class="form-box-bottom__input-name">Номер телефона</span>
+                                <input class="form-box-bottom__input" type="tel" placeholder="" name="tel" required/>
+                            </div>
+                            <div class="form-box-bottom__pole">
+                                <span class="form-box-bottom__input-name">E-mail</span>
+                                <input class="form-box-bottom__input" type="email" placeholder="" name="email" required/>
+                            </div>
+                            <div class="form-box-bottom__pole_big">
+                                <span class="form-box-bottom__input-name">Сообщение</span>
+                                <textarea class="form-box-bottom__textarea" name="comment" rows="3"></textarea>
+                            </div>
+                            <input class="form-box__submit" type="submit" value="Отправить!" name="submit"/>
+                        </form>
                     </div>
-                    <div class="form-box-bottom__pole">
-                        <span class="form-box-bottom__input-name">Номер телефона</span>
-                        <input class="form-box-bottom__input" type="tel" placeholder="" name="tel" required/>
-                    </div>
-                    <div class="form-box-bottom__pole">
-                        <span class="form-box-bottom__input-name">E-mail</span>
-                        <input class="form-box-bottom__input" type="email" placeholder="" name="email" required/>
-                    </div>
-                    <div class="form-box-bottom__pole_big">
-                        <span class="form-box-bottom__input-name">Сообщение</span>
-                        <textarea class="form-box-bottom__textarea" name="comment" rows="3"></textarea>
-                    </div>
+                </div>
 
-                    <input class="form-box__submit" type="submit" value="Отправить!" name="submit"/>
-                </form>
             </div>
+
         </div>
     </section>
 
