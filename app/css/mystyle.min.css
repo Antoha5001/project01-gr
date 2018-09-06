@@ -9574,7 +9574,8 @@ div.pagination {
 
 .box-zagolovok__link:hover {
   text-decoration: underline;
-  background: #CC2900; }
+  background: #CC2900;
+  color: #fff; }
 
 .base-block__zagolovok {
   padding: 0 10px;
@@ -9689,7 +9690,7 @@ div.pagination {
 .news__title,
 .production-page-items__zagolovok a {
   font-size: 30px;
-  line-height: 1.4em;
+  line-height: 1em;
   margin-top: 1rem;
   text-align: center;
   display: block;
@@ -9922,7 +9923,10 @@ div.pagination {
   width: 148px;
   height: 133px;
   margin: 35px auto;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.5s; }
+  .full-stack__icon:hover {
+    transform: scale(1.1); }
   @media (max-width: 1260px) {
     .full-stack__icon {
       margin: 28px auto;
@@ -9942,13 +9946,15 @@ div.pagination {
       line-height: 45px; } }
 
 .full-stack__button {
-  background: #00ccff;
+  background: #009ae3;
   font-size: 26px;
   color: white;
   display: inline-block;
   margin: auto;
   padding: 17px 40px;
   text-decoration: none;
-  border-radius: 6px; }
+  border-radius: 6px;
+  transition: all 0.5s; }
   .full-stack__button:hover {
-    color: white; }
+    color: white;
+    background: #008aff; }

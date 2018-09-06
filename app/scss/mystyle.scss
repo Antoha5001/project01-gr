@@ -1078,6 +1078,7 @@ div.pagination {
 .box-zagolovok__link:hover {
 	text-decoration: underline;
 	background: $dark-orange;
+	color: #fff;
 }
 
 .base-block__zagolovok {
@@ -1197,7 +1198,7 @@ div.pagination {
 .news__title,
 .production-page-items__zagolovok a {
 	font-size: 30px;
-	line-height: 1.4em;
+	line-height: 1em;
 	margin-top: 1rem;
 	text-align: center;
 	//margin: 20px auto 0;
@@ -1465,6 +1466,10 @@ background-position: 50%;
 	//background: white;
 	margin: 35px auto;
 	cursor: pointer;
+	transition: all 0.5s;
+	&:hover{
+		transform: scale(1.1);
+	}
 	@media (max-width: 1260px) {
 		margin: 28px auto;
 		width: 116px;
@@ -1484,7 +1489,7 @@ background-position: 50%;
 	}
 }
 .full-stack__button{
-	background: #00ccff;
+	background: #009ae3;
 	font-size: 26px;
 	color: white;
 	display: inline-block;
@@ -1492,7 +1497,9 @@ background-position: 50%;
 	padding: 17px 40px;
 	text-decoration: none;
 	border-radius: 6px;
+	transition: all 0.5s;
 	&:hover{
 		color: white;
+		background: #008aff;
 	}
 }

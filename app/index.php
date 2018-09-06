@@ -119,7 +119,7 @@ include('includes/banner_1000.php');
 
                     </div>
                     <h3 class="news__title">
-                        <a href="">Наш сайт открылся</a>
+                        <a href="">Наш сайт открылся Наш сайт открылся</a>
                     </h3>
                     <div class="news__content">
                         <a href="#" class="news__small-image">
