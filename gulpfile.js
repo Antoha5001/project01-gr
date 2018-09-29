@@ -61,7 +61,7 @@ gulp.task('serve', function(){
         proxy: srv
     });
 	
-	gulp.watch('app/scss/**/*.scss',gulp.series('style')).on('change', browserSync.reload);
+	gulp.watch('app/scss/**/*.scss',gulp.parallel('style'));
 	gulp.watch('app/script/**/*.js', gulp.series('script')).on('change', browserSync.reload);
 
 	gulp.watch('app/**/*.php').on('change', browserSync.reload);

@@ -13,15 +13,8 @@
 @import "_flickity";
 @import "_production";
 @import "big-image";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=cyrillic);
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=cyrillic);
 
-@font-face {
-	font-family: nautilys;
-	src: url("../fonts/nautiluspompilius.ttf");
-	font-weight: 400;
-	font-style: normal;
-
-}
 
 * {
 	margin: 0;
@@ -31,7 +24,12 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-
+a{
+	transition: color 0.3s;
+}
+a:hover{
+	color: $orange;
+}
 
 .conteiner,
 body,
@@ -41,7 +39,8 @@ html {
 
 body {
 	background: #fefefe;
-	font: 14px/1em Roboto, sans-serif;
+	font-family: 'Fira Sans';
+	font-size: 16px;
 	color: $black;
 }
 
@@ -50,7 +49,7 @@ body {
 	/*background: #fff; */
 	max-width: 100%;
 	margin: 0 auto -140px;
-	background: url("../images/fon.png") $gray;
+	//background: url("../images/fon.png") $gray;
 	@media (max-width: $planshet) {
 		background: white;
 	}
@@ -58,6 +57,7 @@ body {
 
 .all {
 	padding: 0 0 140px;
+	overflow: hidden;
 }
 
 a {
@@ -116,6 +116,7 @@ ul {
 
 h1 {
 	line-height: 1.2;
+	transition: all 0.3s ease-in;
 }
 
 h2 {
@@ -131,7 +132,7 @@ h2,
 h3,
 h4,
 h5 {
-	font-weight: bold;
+	font-weight: 800;
 }
 
 .base-block {
@@ -140,9 +141,9 @@ h5 {
 	text-align: left;
 	position: relative;
 	background: #fff;
-	padding: 30px 40px;
+	padding: 0;
 	@include bradius(2px);
-	border: 1px solid #e8e8e8;
+	//border: 1px solid #e8e8e8;
 	&__height100{
 
 		min-height: 100%;
@@ -172,6 +173,9 @@ h5 {
 }
 
 .base-block_news {
+	margin-top: 65px;
+	border: 1px solid #e8e8e8;
+	padding: 15px;
 	@media (max-width: $planshet) {
 		padding: 20px;
 		border: 0;
@@ -1450,6 +1454,12 @@ div.pagination {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	transition: all 0.3s;
+	background-size: 100%;
+	background-position: 50%;
+	&:hover{
+		background-size: 105%;
+	}
 	@media (max-width: 1260px) {
 		background-size: cover;
 		height: 367px;
@@ -1503,3 +1513,210 @@ background-position: 50%;
 		background: #008aff;
 	}
 }
+
+.scroll-effects_left, h1.scroll-effects_left{
+	opacity: 0;
+	transform: translate(-500px, 100px);
+	@media (max-width: $phone) {
+		transform: translate(0px, 0px);
+	}
+}
+.scroll-effects_right, h1.scroll-effects_right{
+	opacity: 0;
+	transform: translate(500px, 100px);
+	@media (max-width: $phone) {
+		transform: translate(0px, 0px);
+	}
+}
+
+.is-scroll{
+
+	opacity: 1;
+	transform: translate(0px, 0px);
+
+}
+
+/*DEVELOPMENT SECTION*/
+
+.development-box{
+	height: 540px;
+	margin: 40px auto;
+	background: #00ccff; /* Old browsers */
+	background: -moz-linear-gradient(top, #00ccff 0%, #008cff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #00ccff 0%,#008cff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #00ccff 0%,#008cff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ccff', endColorstr='#008cff',GradientType=0 ); /* IE6-9 */
+
+	@media (max-width: $desctop) {
+		height: 485px;
+	}
+	@media (max-width: $planshet) {
+		height: 438px;
+	}
+	@media (max-width: $landPhone) {
+		height: 388px;
+	}
+	@media (max-width: $phone) {
+		height: auto;
+		margin: 0 auto 40px;
+	}
+}
+.development-container{
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: 460px 1fr;
+	@media (max-width: $desctop) {
+		grid-template-columns: 410px 1fr;
+	}
+	@media (max-width: $planshet) {
+		grid-template-columns: 310px 1fr;
+	}
+	@media (max-width: $landPhone) {
+		grid-template-columns: 225px 1fr;
+	}
+	@media (max-width: $phone) {
+		grid-template-columns: 1fr;
+	}
+}
+.development-image-wrapper{
+	position: relative;
+	align-self: stretch;
+	//width: 540px;
+	@media (max-width: $phone) {
+		padding-top: 30px;
+	}
+}
+img.development-image{
+	display: block;
+	position: absolute;
+	top: -111px;
+	left: -90px;
+	width: 540px;
+	height: auto;
+	transition: all 0.8s;
+	@media (max-width: $desctop) {
+		width: 485px;
+		top: -83px;
+		left: -103px;
+	}
+	@media (max-width: $planshet) {
+		width: 420px;
+		top: -55px;
+		left: -130px;
+	}
+	@media (max-width: $landPhone) {
+		width: 304px;
+		top: 17px;
+		left: -105px;
+	}
+	@media (max-width: $phone) {
+		display: none;
+	}
+}
+img.development-image-bitrix {
+	display: none;
+	@media (max-width: $phone) {
+		display: inline-block;
+	}
+}
+.development-content-wrapper{
+	//overflow: hidden;
+	text-align: right;
+	flex: 1 1 ;
+	align-self: stretch;
+	transition: all 0.8s;
+	@media (max-width: $phone) {
+		padding-bottom: 30px;
+		text-align: center;
+	}
+}
+.development-title{
+	font-size: 66px;
+	line-height: 75px;
+	color: #fff;
+	margin-top: 30px;
+	@media (max-width: $desctop) {
+		font-size: 50px;
+		line-height: 70px;
+	}
+	@media (max-width: $planshet) {
+		font-size: 40px;
+		line-height: 56px;
+	}
+	@media (max-width: $landPhone) {
+		font-size: 28px;
+		line-height: 39px;
+	}
+}
+.development-content{
+text-align: right;
+	font-size: 24px;
+	line-height: 36px;
+	color: #c1ffff;
+	@media (max-width: $desctop) {
+		font-size: 21px;
+		line-height: 29px;
+	}
+	@media (max-width: $planshet) {
+		font-size: 18px;
+		line-height: 25px;
+	}
+	@media (max-width: $landPhone) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	@media (max-width: $phone) {
+		text-align: center;
+	}
+}
+.development-button{
+	color: white;
+	display: inline-block;
+	border: 2px solid white;
+	padding: 14px 40px;
+	width: 235px;
+	height: 55px;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 18px;
+	text-align: left;
+	border-radius: 6px;
+	cursor:pointer;
+	margin-top: 30px;
+	transition: all 0.3s;
+	&:hover{
+		color: white;
+		text-decoration: none;
+		background: $orange;
+		border: 2px solid $orange;
+	}
+	span{
+		display: inline-block;
+		position: relative;
+	}
+	span::after{
+		position: absolute;
+		content: "";
+		background: url("../images/button-arrow.svg");
+		width: 32px;
+		height: 17px;
+		top: 2px;
+		right: -50px;
+		transition: all 0.3s ease-in-out;
+	}
+}
+.development-button:hover span::after{
+	transform: translateX(15px);
+}
+/*END DEVELOPMENT SECTION*/
+
+
+
+
+
+
+
+
+
+
+

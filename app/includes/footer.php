@@ -21,7 +21,9 @@
 			</div>
 			<div class="col-lg-4">
                 <div class="footer__contacts footer__contacts_right">
-                    <span class="footer__zagolovok footer__zagolovok_right">2018 &copy ООО «Типография Графика»</span>
+                    <span class="footer__zagolovok footer__zagolovok_right">1998–2018 &copy ООО «Типография Графика»</span>
+                    <br>
+                    <a href="/agreement/"><span>Согласие на обработку персональных данных</span></a>
 
                 </div>
 			</div>
@@ -34,6 +36,38 @@
 </div>
 <script src="common/scripts.min.js"></script>
 <script src="common/modal.js"></script>
+<script src="common/scroll.js"></script>
+<script src="common/services/slick.min.js"></script>
+<script>
+    "use strict";
+    (function () {
+        window.addEventListener('DOMContentLoaded', init);
+
+        function init() {
+            const bigImg = $('.slick__big-img_wrapper'),
+                thumbImg = $('.slick__img-container');
+
+            if(bigImg.length > 0){
+
+            }
+            $('.slick__big-img_wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: thumbImg,
+                // autoplay: true
+            });
+            thumbImg.slick({
+                slidesToShow: 3,
+                asNavFor: bigImg,
+                focusOnSelect: true,
+                variableWidth:true,
+                centerMode: true
+            });
+        }
+    })();
+</script>
 </body>
 
 </html>

@@ -45,29 +45,40 @@ include('includes/head.php');
                             <img src="images/pages/canon-macro.jpg" alt="" style="margin-top: 30px;">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="big-foto">
-                                <img style="margin-top: 40px;" src="images/pages/food-02.jpg" alt="">
-                            </div>
-                            <div class="thumb-foto_wrapper" style="display: flex; margin: 40px auto;justify-content:center;">
-                                <div class="thumb-foto" style="width: 210px; margin: 0 20px;">
-                                    <img src="images/pages/foto-2_thumb.jpg" alt="">
-                                </div>
-                                <div class="thumb-foto" style="width: 210px; margin: 0 20px;">
-                                    <img src="images/pages/foto-3_thumb.jpg" alt="">
-                                </div>
-                                <div class="thumb-foto" style="width: 210px; margin: 0 20px;">
-                                    <img src="images/pages/foto-4_thumb.jpg" alt="">
-                                </div>
-                                <div class="thumb-foto" style="width: 210px; margin: 0 20px;">
-                                    <img src="images/pages/foto-5_thumb.jpg" alt="">
-                                </div>
 
-                            </div>
+
+
+
+
+                    <div class="slick__big-img_wrapper">
+                        <div class="slick__big-img">
+                            <img src="images/full-stack/food-01.jpg" alt="">
+                        </div>
+                        <div class="slick__big-img">
+                            <img src="images/full-stack/food-02.jpg" alt="">
+                        </div>
+                        <div class="slick__big-img">
+                            <img src="images/full-stack/food-01.jpg" alt="">
+                        </div>
+                        <div class="slick__big-img">
+                            <img src="images/full-stack/food-02.jpg" alt="">
                         </div>
                     </div>
 
+                    <div class="slick__img-container">
+                        <div class="img-wrapper">
+                            <img src="images/full-stack/foto-1_thumb.jpg" alt="">
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="images/full-stack/foto-2_thumb.jpg" alt="">
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="images/full-stack/foto-1_thumb.jpg" alt="">
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="images/full-stack/foto-2_thumb.jpg" alt="">
+                        </div>
+                    </div>
                     <div class="hr">
                     </div>
                     <p>Условия и стоимости изготовления продукции уточняйте у менеджеров:</p>
@@ -77,7 +88,7 @@ include('includes/head.php');
                     <p style="margin: 2px 0;"> или по E-mail:
                         <a class="link" href="mailto:623344@mail.ru">623344@mail.ru</a>
                     </p>
-                </div>
+
             </div>
         </div>
     </section>

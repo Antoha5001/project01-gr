@@ -89,6 +89,8 @@ $(document).ready(function () {
 		}
 	}
 
+
+
 	var shtamps = document.getElementsByClassName('shtamp-box');
 
 	showHidden(shtamps);
