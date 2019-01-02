@@ -1,6 +1,6 @@
-# MODX supports Friendly URLs via this .htaccess file. You must serve web
+# MODX supports Friendly URLs via this .htaccess2 file. You must serve web
 # pages via Apache with mod_rewrite to use this functionality, and you must
-# change the file name from ht.access to .htaccess.
+# change the file name from ht.access to .htaccess2.
 #
 # Make sure RewriteBase points to the directory where you installed MODX.
 # E.g., "/modx" if your installation is in a "modx" subdirectory.
@@ -60,7 +60,7 @@ RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
 #
 # IF REGISTER_GLOBALS DIRECTIVE CAUSES 500 INTERNAL SERVER ERRORS :
 #
-# Your server does not allow PHP directives to be set via .htaccess. In that
+# Your server does not allow PHP directives to be set via .htaccess2. In that
 # case you must make this change in your php.ini file instead. If you are
 # using a commercial web host, contact the administrators for assistance in
 # doing this. Not all servers allow local php.ini files, and they should

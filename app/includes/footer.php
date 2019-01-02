@@ -21,7 +21,7 @@
 			</div>
 			<div class="col-lg-4">
                 <div class="footer__contacts footer__contacts_right">
-                    <span class="footer__zagolovok footer__zagolovok_right">1998–2018 &copy ООО «Типография Графика»</span>
+                    <span class="footer__zagolovok footer__zagolovok_right">1998–2019 &copy ООО «Типография Графика»</span>
                     <br>
                     <a href="/agreement/"><span>Согласие на обработку персональных данных</span></a>
 
@@ -38,6 +38,7 @@
 <script src="common/modal.js"></script>
 <script src="common/scroll.js"></script>
 <script src="common/services/slick.min.js"></script>
+<script src="common/services/jquery.fancybox.min.js"></script>
 <script>
     "use strict";
     (function () {

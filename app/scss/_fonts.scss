@@ -1,25 +1,28 @@
 @charset "UTF-8";
+//@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700&subset=cyrillic');
+
+
 @font-face{
-  font-family: 'Fira Sans';
+  font-family: "Fira-Sans-web";
+  src: url("../fonts/FiraSans-Regular.eot"),
+   url('../fonts/FiraSans-Regular.ttf') format("truetype"),
+  url('../fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FiraSans-Regular.woff2') format('woff2'),
+  url('../fonts/FiraSans-Regular.woff') format('woff'),
+  url('../fonts/FiraSans-Regular.svg#OpenSans') format('svg');
   font-style: normal;
   font-weight: 400;
-  src: url('../../fonts/FiraSans-Regular.eot');
-  src: url('../../fonts/FiraSans-Regular.ttf') format("truetype"),
-  url('../../fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/FiraSans-Regular.woff2') format('woff2'),
-  url('../../fonts/FiraSans-Regular.woff') format('woff'),
-  url('../../fonts/FiraSans-Regular.svg#OpenSans') format('svg');
 }
 @font-face{
-  font-family: 'Fira Sans';
+  font-family: 'Fira-Sans-web';
   font-style: normal;
   font-weight: 800;
-  src: url('../../fonts/FiraSans-Regular.eot');
-  src: url('../../fonts/FiraSans-Regular.ttf') format("truetype"),
-  url('../../fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/FiraSans-Regular.woff2') format('woff2'),
-  url('../../fonts/FiraSans-Regular.woff') format('woff'),
-  url('../../fonts/FiraSans-Regular.svg#OpenSans') format('svg');
+  src: url('../fonts/FiraSans-Bold.eot'),
+  url('../fonts/FiraSans-Bold.ttf') format("truetype"),
+  url('../fonts/FiraSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FiraSans-Bold.woff2') format('woff2'),
+  url('../fonts/FiraSans-Bold.woff') format('woff'),
+  url('../fonts/FiraSans-Bold.svg#OpenSans') format('svg');
 }
 
 /*TOP-MENU-SMALL*/

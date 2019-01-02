@@ -1,0 +1,56 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+RewriteEngine on
+<IfModule mod_php5.c>
+  php_flag allow_call_time_pass_reference 1
+  php_flag session.use_trans_sid off
+
+  #php_value display_errors 1
+  php_value open_basedir none
+
+  #php_value mbstring.func_overload 2
+  #php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/jpg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+</IfModule>
+
+<ifModule mod_headers.c>
+	#кэшировать html и htm файлы на один день
+	<FilesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=43200"
+	</FilesMatch>
+	#кэшировать css, javascript и текстовые файлы на одну неделю
+	<FilesMatch "\.(css|txt)$">
+		Header set Cache-Control "max-age=604800"
+	</FilesMatch>
+	#кэшировать флэш и изображения на месяц
+	<FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png|svg|ttf)$">
+		Header set Cache-Control "max-age=2592000"
+	</FilesMatch>
+	#отключить кэширование
+	<FilesMatch "\.(js|pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>
+ php_value open_basedir none

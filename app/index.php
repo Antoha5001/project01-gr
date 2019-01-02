@@ -1,11 +1,12 @@
-<?
+<?php
 include('includes/head.php');
 ?>
-<?
+<?php
 include('includes/banner_1000.php');
 ?>
 
-
+<?php
+?>
 <section class="container-fluid production-box">
     <div class="container">
         <div class="row justify-content-center">
@@ -145,6 +146,32 @@ include('includes/banner_1000.php');
 
     </div>
 </section>
+<section class="gallery">
+    <h1>Пример наших работы:</h1>
+    <div class="gellery-box">
+        <div class="gellery-item">
+            <a href="images/gallery/01.jpg"  data-fancybox="gallery" >
+                <img src="images/gallery/01_thumb.jpg" alt="">
+            </a>
+        </div>
+        <div class="gellery-item">
+            <a href="images/gallery/02.jpg" data-fancybox="gallery" >
+                <img src="images/gallery/02_thumb.jpg" alt="">
+            </a>
+        </div>
+        <div class="gellery-item">
+            <a href="images/gallery/03.jpg"  data-fancybox="gallery" >
+                <img src="images/gallery/03_thumb.jpg" alt="">
+            </a>
+        </div>
+        <div class="gellery-item">
+            <a href="images/gallery/04.jpg"  data-fancybox="gallery" >
+                <img src="images/gallery/04_thumb.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+</section>
 <section class="container-fluid development-box">
     <div class="container development-container" style="">
         <div class="development-image-wrapper">
@@ -166,10 +193,10 @@ include('includes/banner_1000.php');
 </div>
 </div>
 
-<?
+<?php
 include('includes/bottom_forms.php');
 ?>
 
-<?
+<?php
 include('includes/footer.php');
 ?>

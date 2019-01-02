@@ -13,12 +13,13 @@ const gulp = require('gulp'),
 	cache = require('gulp-cache'),
 	autoprefixer = require('gulp-autoprefixer'),
 	pump = require('pump'),
+	watch = require('gulp-watch'),
 	babel = require('gulp-babel');
 	
 
-const srv = 'project02.gr:82';
+const srv = 'project02.gr';
 
-var myScripts = [
+const myScripts = [
     'app/script/jquery.min.js',
     'app/script/jquery.validate.min.js',
     'app/script/modernizr.js',
@@ -28,8 +29,9 @@ var myScripts = [
     'app/script/bootstrap.min.js',
 	'app/script/parallax.js',
     'app/script/myscript.js'
-]
-
+];
+const myStyles =[]
+;
 
 function scripts() {
 
@@ -46,9 +48,15 @@ function styles(){
 	return gulp.src('./app/scss/mystyle.scss')
 	.pipe(sass())
 	.pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest('app/css'));
+	.pipe(gulp.dest('app/css'))
+		.pipe(browserSync.stream());
 }
 
+function php() {
+	return gulp.src('*.php')
+		.pipe(gulp.dest('.'))
+		.pipe(browserSync.reload);
+}
 
 function defaultTask() {
 
@@ -61,10 +69,14 @@ gulp.task('serve', function(){
         proxy: srv
     });
 	
-	gulp.watch('app/scss/**/*.scss',gulp.parallel('style'));
+	// gulp.watch('app/scss/**/*.scss',gulp.parallel('style'));
+	// gulp.watch('./app/scss/**/*.scss',{usePolling: true} , gulp.series(styles));
+	watch('./app/scss/**/*.scss',{usePolling: true},styles);
 	gulp.watch('app/script/**/*.js', gulp.series('script')).on('change', browserSync.reload);
 
-	gulp.watch('app/**/*.php').on('change', browserSync.reload);
+	// gulp.watch('app/**/*.php').on('change', browserSync.reload);
+	gulp.watch('./app/**/*.php',{usePolling: true}).on('change', browserSync.reload);
+	gulp.watch('./app/**/*.html').on('change', browserSync.reload);
 	gulp.watch('app/**/*.html').on('change', browserSync.reload);
 });
 

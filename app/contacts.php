@@ -1,8 +1,8 @@
-<?
+<?php
 include('includes/head.php');
 ?>
 
-<?include_once('includes/breadcrumb.php')?>
+<?php include_once('includes/breadcrumb.php')?>
 <section class="content-box container-fluid">
     <div class="container">
         <div class="row">

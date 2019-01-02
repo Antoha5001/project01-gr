@@ -109,7 +109,7 @@ gulp.task('build', ['removedist', 'imagemin', 'css-libs', 'js'], function () {
     var buildFiles = gulp.src([
         'app/*.html',
         'app/*.php',
-        'app/.htaccess',
+        'app/.htaccess2',
     ]).pipe(gulp.dest('dist'));
 
     var buildCss = gulp.src([
@@ -143,7 +143,7 @@ gulp.task('deploy', function () {
 
     var globs = [
         'dist/**',
-        'dist/.htaccess',
+        'dist/.htaccess2',
     ];
     return gulp.src(globs, {buffer: false})
         .pipe(conn.dest('/path/to/folder/on/server'));
